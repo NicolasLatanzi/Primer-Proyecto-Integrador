@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/232428d154.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header class="primary-header bg-dark">
+        <div class="my-container">
+            <div class="primary-header-div split-row a-center">
+                <a href="index.html" class="logo">Nicolas <span>Latanzi</span></a>
+
+                <nav class="primary-nav">
+                    <ul class="nav-list split-row">
+                        <li class="navbar-link"><a href="services.html">Servicios</a></li>
+                        <li class="navbar-link"><a href="aboutus.html">Sobre mi</a></li>
+                        <li class="navbar-link"><a href="contact.html">Contacto</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="aboutus">
+        <div class="my-container split a-center">
+            <div class="section-left flow-content xl-space">
+                <p class="section-title">Sobre mi</p>
+
+                <div class="split a-center">
+                    <div class="first-div flow-content">
+                        <h2>Quien soy</h2>
+                        <p>Algunos lo llaman fotografía. Pero para mí, es mucho más.
+
+                            Todo lo que he vivido, sentido y descubierto me ha convertido en un fotógrafo experiencial,
+                            que más que ofrecer imágenes, ayuda a las personas a conseguir algo fascinante.
+
+                            Nací en Madrid y crecí siendo un entusiasta de las historias y la imagen, fija o en
+                            movimiento.
+
+                            Decidido a convertir mi pasión en mi trabajo, me licencié en Comunicación Audiovisual, lo
+                            que
+
+                            me llevó a trabajar como videógrafo y reportero gráfico en informativos de cadenas como
+
+                            Localia, Telemadrid, La Sexta y Telecinco.
+                        </p>
+                    </div>
+                    <img class="shadow" src="/img/ben-parker-OhKElOkQ3RE-unsplash.jpg" alt="">
+                </div>
+
+                <h2>Mi misión</h2>
+                <p>Me gusta trasladar a cada proyecto un estilo directo y no intrusivo, estando siempre ahí pero sin romper la magia del momento.
+
+                    Para mí, la clave es aderezar una fuerte carga documental con unas gotas de creatividad, hasta lograr que cada pareja, al descubrir las fotos de su boda, me pregunten…
+                    
+                    ¿Cómo lo has conseguido?</p>
+                <h2>Mis valores</h2>
+                <p>Sé valorar el poderoso paso del tiempo.
+
+                    Entre otras cosas, porque soy padre de dos hijos que han dejado de ser críos demasiado rápido.
+                    
+                    Intento hacer grande cada pequeño detalle. Pero si algo de verdad me emociona, es lo irrepetible y diferente. 
+                
+                    La fotografía es una manera de viajar en el tiempo, de hacernos sentir siempre cerca de nuestros seres más queridos y de inmortalizar las emociones más valiosas.
+                    
+                    Sé lo importante que es el día de vuestra boda, y también que para lograr el mejor resultado es fundamental conoceros, descubrir lo que os hace diferentes y conseguir entre nosotros una buena comunicación, confianza y complicidad.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="cta bg-accent">
+        <div class="my-container flow-content xl-space">
+            <p class="section-title">Reservá mis servicios hoy</p>
+            <h2>¿Qué estás esperando?</h2>
+            <p>Este es tu momento de poder guardar todos esos recuerdos.</p>
+            <a href="services.html" class="my-btn">Ver servicios</a>
+        </div>
+    </section>
+
+    <a href="#" class="btn text-accent back-to-top"><i class="fas fa-arrow-circle-up arrow-up"></i></a>
+
+
+    <footer class="bg-dark">
+        <div class="my-container text-centered">
+            <div class="split a-center">
+                <a href="index.html" class="logo">Nicolas <span>Latanzi</span></a>
+
+                <div class="footer-right split-row">
+                    <ul class="footer-ul">
+                        <li>Enlaces útiles</li>
+                        <li><a href="services.html">Servicios</a></li>
+                        <li><a href="aboutus.html">Sobre nosotros</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                    <ul class="footer-ul">
+                        <li>Redes sociales</li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="developed">Desarrollado por Nicolas Latanzi</p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
+
+<script>
+    $(function () {
+        $(".hamburger").click(function () {
+            $(this).toggleClass("active");
+            $(".nav-list").toggleClass("active");
+            $("body").toggleClass("body-overflow-hidden");
+        });
+
+        $(".navbar-link").click(function () {
+            $(".hamburger").removeClass("active");
+            $(".nav-list").removeClass("active");
+            $("body").removeClass("body-overflow-hidden");
+        });
+
+
+        $(document).ready(function () {
+
+            $(window).scroll(function () {
+                var showAfter = 100;
+                if ($(this).scrollTop() > showAfter) {
+                    $('.back-to-top').fadeIn();
+                } else {
+                    $('.back-to-top').fadeOut();
+                }
+            });
+
+            $('.back-to-top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+
+        });
+
+
+
+    });
+
+
+</script>
