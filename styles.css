@@ -843,3 +843,25 @@ footer .split {
         flex: 1 1 33%;
     }
 }
+
+.variables{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px;
+    position: absolute;
+    left: 0;
+    top: 121px;
+    width: 100%;
+    color: var(--clr-accent-400);
+}
+.variables h3{
+    font-size: 18px;
+}
+#usuario{
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+#usuario:hover{
+    color: var(--yellow);
+}
