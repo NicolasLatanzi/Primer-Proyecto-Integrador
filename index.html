@@ -40,7 +40,10 @@
             </div>
         </div>
     </header>
-
+    <div class="variables bg-dark">
+        <h3 id="usuario" title="Haz clic aqui para identificarte">Bienvenido/a</h3>
+        <h3 id="visitas">Visitas: </h3>
+    </div>
     <section class="main-section">
         <div class="my-container split a-center">
             <div class="section-left flow-content xl-space">
@@ -53,7 +56,7 @@
                 <a href="services.html" class="my-btn">Ver servicios</a>
             </div>
 
-            <img class="shadow" src="/img/photographer.jpg" alt="">
+            <img class="shadow" src="img/photographer.jpg" alt="">
         </div>
     </section>
 
@@ -147,23 +150,26 @@
                     <p class="text-italic">Nicolas es un artista.
 
                         ¡Volveríamos a contar con él para el bautismo de nuestro bebé mil veces!
-                        Ni nosotros ni nuestros invitados nos dimos cuenta de que estaba en el bautismo, y eso se agradece.
-                        
+                        Ni nosotros ni nuestros invitados nos dimos cuenta de que estaba en el bautismo, y eso se
+                        agradece.
+
                         ¡Las fotos han sido alucinantes!
                         Mil gracias de corazón, Nicolas.
-                        
+
                         ¡Fue todo un placer tenerte en ese gran día!</p>
                     <h5 class="mt-3">Romina & Julián</h5>
 
                 </div>
                 <div class="testimonial-card bg-dark corner-square shadow">
-                    <p class="text-italic">Gracias por la serenidad que transmites, tus consejos a los novios y tus conversaciones el día de la boda.
+                    <p class="text-italic">Gracias por la serenidad que transmites, tus consejos a los novios y tus
+                        conversaciones el día de la boda.
 
                         Te haces cercano y eso da buen rollo, a nosotros y a los invitados.
-                        
-                        También por los detalles que nos has ido regalando durante el proceso y tu disponibilidad para tener todo a tiempo, muy rápido y atento.
-                        
-                        </p>
+
+                        También por los detalles que nos has ido regalando durante el proceso y tu disponibilidad para
+                        tener todo a tiempo, muy rápido y atento.
+
+                    </p>
                     <h5 class="mt-3">Pablo & Marta</h5>
 
                 </div>
@@ -213,6 +219,37 @@
 </html>
 
 <script>
+
+    let usuario = "";
+    let visitas = 0;
+    let boton_usuario = document.getElementById('usuario');
+
+    function identificarUsuario() {
+        usuario = localStorage.getItem("usuario") ?? '';
+        boton_usuario.innerText = "Bienvenido/a " + usuario;
+        if (usuario !== '') {
+            boton_usuario.setAttribute('title', '');
+        }
+    }
+    function contador() {
+        visitas = localStorage.getItem("visitas") ?? 0;
+        visitas++;
+        localStorage.setItem("visitas", visitas);
+        document.getElementById('visitas').innerText = "Visitas: " + visitas;
+    }
+
+    boton_usuario.onclick = function () {
+        let nombre_apellido = "";
+        do {
+            nombre_apellido = prompt("Ingrese su nombre para identificarse");
+        } while (nombre_apellido === "" || nombre_apellido === null);
+        localStorage.setItem("usuario", nombre_apellido);
+        location.reload();
+    }
+
+    identificarUsuario();
+    contador();
+
     $(function () {
         $(".hamburger").click(function () {
             $(this).toggleClass("active");
